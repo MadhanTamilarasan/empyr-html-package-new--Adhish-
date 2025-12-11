@@ -1,0 +1,172 @@
+/* Header Position Fix - Consistent positioning across all screen sizes */
+
+/* Force header to maintain consistent position */
+.header-area.header-style-three {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 999 !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+/* Adjust header wrap positioning */
+.header__wrap {
+    margin-top: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Ensure hero section accounts for fixed header */
+.hero.hero-style-two {
+    padding-top: 150px !important;
+    margin-top: 0 !important;
+}
+
+/* Body offset to prevent content hiding under fixed header */
+body {
+    padding-top: 30px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .header__wrap {
+        margin-top: 10px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+    
+    .hero.hero-style-two {
+        padding-top: 140px !important;
+    }
+    
+    body {
+        padding-top: 30px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__wrap {
+        margin-top: 8px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .hero.hero-style-two {
+        padding-top: 130px !important;
+    }
+    
+    body {
+        padding-top: 25px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__wrap {
+        margin-top: 5px !important;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    .hero.hero-style-two {
+        padding-top: 120px !important;
+    }
+    
+    body {
+        padding-top: 20px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .header__wrap {
+        margin-top: 3px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .hero.hero-style-two {
+        padding-top: 110px !important;
+    }
+    
+    body {
+        padding-top: 15px !important;
+    }
+}
+
+/* Logo responsive styling - Multiple selectors for better targeting */
+.header-logo img,
+.xb-logo-mobile img,
+#xb-header-area .header-logo img,
+#xb-header-area .xb-logo-mobile img,
+.header-area .header-logo img {
+    max-height: 50px !important;
+    width: auto !important;
+    height: auto !important;
+    transition: all 0.3s ease !important;
+}
+
+@media (max-width: 1199px) {
+    .header-logo img,
+    .xb-logo-mobile img,
+    #xb-header-area .header-logo img,
+    #xb-header-area .xb-logo-mobile img,
+    .header-area .header-logo img {
+        max-height: 45px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-logo img,
+    .xb-logo-mobile img,
+    #xb-header-area .header-logo img,
+    #xb-header-area .xb-logo-mobile img,
+    .header-area .header-logo img {
+        max-height: 40px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-logo img,
+    .xb-logo-mobile img,
+    #xb-header-area .header-logo img,
+    #xb-header-area .xb-logo-mobile img,
+    .header-area .header-logo img {
+        max-height: 35px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-logo img,
+    .xb-logo-mobile img,
+    #xb-header-area .header-logo img,
+    #xb-header-area .xb-logo-mobile img,
+    .header-area .header-logo img {
+        max-height: 30px !important;
+    }
+}
+
+/* Override any conflicting sticky behavior */
+#xb-header-area .xb-header-area-sticky {
+    position: fixed !important;
+    transform: translateY(0%) !important;
+    visibility: visible !important;
+    top: 0 !important;
+}
+
+/* Ensure header background is consistent */
+.header-area.header-style-three,
+#xb-header-area .xb-header-area-sticky {
+    background: var(--color-heading) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
